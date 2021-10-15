@@ -7,11 +7,17 @@ Main steps in my run_analysis.R code:
 Step 1   Merges the training and the test sets to create one data set
 
 1.1_check dimensions of each set of training data dim()
+
 1.2_check dimensions of each set of test data dim()
+
 1.3_put data training together (cbind)
+
 1.4_put data test together (cbind)
+
 1.5_put data train and test together(rbind) (result:dataframe"all_data")
+
 1.6 put diffrent working name for each column (names: V1:V12)
+
 
 
 Step 2  Extracts only the measurement on the mean and standard diviation for each measurement
