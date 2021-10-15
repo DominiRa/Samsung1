@@ -6,7 +6,7 @@ Samsung_data_Getting&amp;cCeaning_data
 Main steps in my run_analysis.R code:
 =================
 
-
+======
 Step 1   Merges the training and the test sets to create one data set
 
 1.1_check dimensions of each set of training data dim()
