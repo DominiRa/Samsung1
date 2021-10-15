@@ -3,6 +3,7 @@ Samsung_data_Getting&amp;cCeaning_data
 
 Main steps in my run_analysis.R code:
 
+
 Step 1   Merges the training and the test sets to create one data set
 1.1_check dimensions of each set of training data dim()
 1.2_check dimensions of each set of test data dim()
@@ -21,9 +22,9 @@ I start from reading "activity_labels.txt",then I create additional table with "
 
 
 
-#4.Appropriately labels the data set with descriptive variable names
-#names(all_data)<-c("piekna nazwa 1","piekna nazwa 2","V3","V4","V5","V6","V7","V8","V9","V10","V11","V12")
-all_data3<-rename(all_data3,"subject_id"="V1","features"="V2","activity"="act_number","body_acc_x"="V4", "body_acc_y"="V5", "body_acc_z"="V6", "body_gyro_x"="V7", "body_gyro_y"="V8", "body_gyro_z"="V9", "total_acc_x"="V10", "total_acc_y"="V11", "total_acc_z"="V12")
+Step 4  Appropriately labels the data set with descriptive variable names
+I use rename function to change variables' names (all_data3)
+
 
 #5.From the data set in step 4, create a second, independent tidy data set with the average of each variable for each activity and each subject
 #5.1_Train data
