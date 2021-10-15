@@ -17,6 +17,7 @@ I start from building data frame from "X_train.txt" and "X_train.txt" with colum
 
 
 #3.Add descriptive activity names to name the activities in the data set
+I read "activity_labels.txt"
 activity_labels<-read.csv("./UCI HAR Dataset/activity_labels.txt",header = FALSE)
 
 all_data2<-mutate(all_data,activity=V3)
