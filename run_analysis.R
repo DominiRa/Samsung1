@@ -47,7 +47,7 @@ all_train_data<-cbind(data_subject_train,data_x_train,data_y_train,body_acc_x_tr
 all_test_data<-cbind(data_subject_test,data_x_test,data_y_test,body_acc_x_test,body_acc_y_test,body_acc_z_test,body_gyro_x_test,body_gyro_y_test,body_gyro_z_test,total_acc_x_test,total_acc_y_test,total_acc_z_test)
 
 
-#1.4_put data train and test together
+#1.5_put data train and test together
 all_data<-rbind(all_train_data,all_test_data)
 #dim(all_data)
 #[1] 10299    12
@@ -173,7 +173,7 @@ c_all_test_data<-cbind(data_subject_test,data_y_test,g21,g22,g23,g24,g25,g26,g27
 c_all_data<-rbind(c_all_train_data,c_all_test_data)
 
 #5.51 put diffrent working name for each column
-names(c_all_data)<-c("subject_id","activity_no","body_acc_x","body_acc_y","body_acc_z","body_gyro_x","body_gyro_y","body_gyro_z","total_acc_x","total_acc_y","total_acc_z")
+names(c_all_data)<-c("subject_id","activity_no","a_body_acc_x","a_body_acc_y","a_body_acc_z","a_body_gyro_x","a_body_gyro_y","a_body_gyro_z","a_total_acc_x","a_total_acc_y","a_total_acc_z")
 
 #5.6 put descriptive activity names and column ordering
 c_all_data_new<-merge(c_all_data, tab_pom, by.x = "activity_no",by.y ="act_num")
