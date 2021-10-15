@@ -3,7 +3,6 @@ Samsung_data_Getting&amp;cCeaning_data
 
 
 
-=================
 Main steps in my run_analysis.R code:
 =================
 
