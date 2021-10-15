@@ -49,7 +49,7 @@ I use rename function to change variables' names (all_data3)
 
 Step 5  Create a second, independent tidy data set with the average of each variable for each activity and each subject
 I calculate the mean of 128 readings for each window, now I have only one "value" for each subject for each activity and each variable
-I change README and CodeBook
+I change CodeBook
 
 
 
