@@ -1,7 +1,7 @@
 # Samsung1
 Samsung_data_Getting&amp;cCeaning_data
 
-Main steps in main run_analysis.R code:
+Main steps in my run_analysis.R code:
 
 Step 1   Merges the training and the test sets to create one data set
 1.1_check dimensions of each set of training data dim()
@@ -16,22 +16,9 @@ Step 2  Extracts only the measurement on the mean and standard diviation for eac
 I start from building data frame from "X_train.txt" and "X_train.txt" with columns names from "features.txt", than using grep function I obtain new data frame (d_total) only with the measurement on the mean and standard diviation
 
 
-#3.Add descriptive activity names to name the activities in the data set
-I start from reading "activity_labels.txt", at the end I have dateframe (all_data3) with activity name (instead of activity number)
-activity_labels<-read.csv("./UCI HAR Dataset/activity_labels.txt",header = FALSE)
+Step 3  Add descriptive activity names to name the activities in the data set
+I start from reading "activity_labels.txt",then I create additional table with "activity dictionary" at the end I have dateframe (all_data3) with activity name (instead of activity number)
 
-all_data2<-mutate(all_data,activity=V3)
-
-act_tabela<-mutate(activity_labels,activity_number=activity_labels)
-names(act_tabela)<-c("act_number","act_name")
-SplitText<-strsplit(act_tabela$act_number," ")
-firstElement<-function(x){x[1]}
-sapply(SplitText,firstElement)
-tab_pom<-mutate(act_tabela,act_num=sapply(SplitText,firstElement))
-
-all_data2<-merge(all_data, tab_pom, by.x = "V3",by.y ="act_num")
-all_data3<-select(all_data2,V1:act_number)
-#View(all_data3)
 
 
 #4.Appropriately labels the data set with descriptive variable names
