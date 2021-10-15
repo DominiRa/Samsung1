@@ -9,15 +9,13 @@ Step 1   Merges the training and the test sets to create one data set
 1.3_put data training together (cbind)
 1.4_put data test together (cbind)
 1.5_put data train and test together(rbind) (result:dataframe"all_data")
-1.6 put diffrent working name for each column (names: V1:V12
+1.6 put diffrent working name for each column (names: V1:V12)
 
 
 
 #2.Extracts only the measurement on the mean and standard diviation for each measurement
-#feature_label<-read.csv("./UCI HAR Dataset/features.txt",header = FALSE), tak nie moge wczytac bo robi sie ponad 700 elementów
-feature_label<-readLines("./UCI HAR Dataset/features.txt")
-#b_data_x_train<-readLines("./UCI HAR Dataset/train/X_train.txt")
-#b_data_x_test<-readLines("./UCI HAR Dataset/test/X_test.txt")
+I start from building data frame from "X_train.txt" and "X_train.txt" with columns names from "features.txt", than using grep function I obtain new data frame (d_total) only with the measurement on the mean and standard diviation
+
 new_df_feature<-data.frame(c(feature_label))
 #nrow(new_df_feature)
 #561
