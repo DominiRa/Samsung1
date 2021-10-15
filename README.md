@@ -12,27 +12,9 @@ Step 1   Merges the training and the test sets to create one data set
 1.6 put diffrent working name for each column (names: V1:V12)
 
 
-
-#2.Extracts only the measurement on the mean and standard diviation for each measurement
+Step 2  Extracts only the measurement on the mean and standard diviation for each measurement
 I start from building data frame from "X_train.txt" and "X_train.txt" with columns names from "features.txt", than using grep function I obtain new data frame (d_total) only with the measurement on the mean and standard diviation
 
-new_df_feature<-data.frame(c(feature_label))
-#nrow(new_df_feature)
-#561
-c_data_x_train<-read.csv("./UCI HAR Dataset/train/X_train.txt",header = FALSE,sep = "")
-c_data_x_test<-read.csv("./UCI HAR Dataset/test/X_test.txt", header = FALSE,sep = "")
-c_data_x_together<-rbind(c_data_x_train,c_data_x_test)
-names(c_data_x_together)<-c(feature_label)
-e<-grep("mean",new_df_feature$c.feature_label.)
-#head(e)
-#1 2 3 41 42 43
-e1<-grep("std",new_df_feature$c.feature_label.)
-#head(e1)
-#4 5 6 44 45 46
-d<-c_data_x_together[ ,e]
-d1<-c_data_x_together[ ,e1]
-d_total<-cbind(d,d1)
-#in this dataframe you find only the measurement on the mean and standard diviation for each measurement
 
 #3.Add descriptive activity names to name the activities in the data set
 activity_labels<-read.csv("./UCI HAR Dataset/activity_labels.txt",header = FALSE)
